@@ -1,0 +1,30 @@
+research_task:
+  description: >
+    Conduct a thorough investigation to gather key company details for UK-registered companies, including the official
+    registered company name, address, and website.
+    Investigate and determine the year a company was founded and the number of employees it currently has.
+    Leverage public company records or other reputable sources to gather this historical and operational data.
+    Focus on authoritative sources like Companies House, official websites, and social media profiles to provide
+    accurate and reliable data.
+    Extract the SIC code that best describes the business activities of the company and categorize the primary industry
+    sector of the company.
+    Provide a brief and accurate description of the business activities of the company.
+    Provide a list with the social media profiles of the company and find the key contacts in the company such as the
+    CEO, CFO, and other relevant individuals.
+    Identify which accounting software a company uses by searching through available online resources such as the company
+    website or trusted business platforms. Focus on identifying widely used accounting software such Xero, QuickBooks,
+    Sage. Some of them provide a list of their partners like https://www.xero.com/advisors/find-advisors for Xero and
+    https://proadvisor.intuit.com/app/accountant/search for QuickBooks.
+  expected_output: A structured text with of the information you were asked for in paragraphs.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information including links to the social media
+    profiles of the key contacts of the company. Add the email, phone, and LinkedIn profile of the contacts of the company.
+  expected_output: >
+    A fully fledge reports with the mains topics, each with a full section of information.
+    Formatted as markdown without '```'
+  agent: reporting_analyst
+  output_file: company_data.md
