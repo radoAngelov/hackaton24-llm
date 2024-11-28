@@ -24,6 +24,7 @@ convert_to_json_task:
     Make sure the report is detailed and contains any and all relevant information including links to the social media
     profiles of the key contacts of the company. Add the email, phone, and LinkedIn profile of the contacts of the company.
     If you cannot get any information, leave "null" as value of the field.
+    The industry must be categorized and always in capital letters.
 
     Ensure the JSON is well-formed and all fields are populated based on the report matching the following structure:
     {{
