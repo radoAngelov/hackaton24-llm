@@ -9,8 +9,8 @@ research_task:
     Extract the SIC code that best describes the business activities of the company and categorize the primary industry
     sector of the company.
     Provide a brief and accurate description of the business activities of the company.
-    Provide a list with the social media profiles of the company and find the key contacts in the company such as the
-    CEO, CFO, and other relevant individuals.
+    Provide a list with the social media profiles of the company.
+    Find the key contacts in the company such as the CEO, CFO, and other relevant individuals.
     Identify which accounting software a company uses by searching through available online resources such as the company
     website or trusted business platforms. Focus on identifying widely used accounting software such Xero, QuickBooks,
     Sage. Some of them provide a list of their partners like https://www.xero.com/advisors/find-advisors for Xero and
@@ -23,6 +23,7 @@ convert_to_json_task:
     Convert the provided report into a JSON file with the following structure:
     Make sure the report is detailed and contains any and all relevant information including links to the social media
     profiles of the key contacts of the company. Add the email, phone, and LinkedIn profile of the contacts of the company.
+    If you cannot get any information, leave "null" as value of the field.
 
     Ensure the JSON is well-formed and all fields are populated based on the report matching the following structure:
     {{
@@ -58,6 +59,9 @@ convert_to_json_task:
       ],
       "accounting_softwares": ["string (example: xero, quickbooks, sage, freeagent)"]
     }}
-  expected_output: A valid JSON file matching the specified structure. Format the JSON without '```' and '```json' tags.
+  expected_output: >
+    A valid JSON file matching the specified structure.
+    Format the JSON without '```' and '```json' tags.
+    Treat missing information as "null" in the JSON file.
   agent: json_converter
   output_file: company_data.json

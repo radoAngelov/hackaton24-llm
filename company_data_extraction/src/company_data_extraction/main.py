@@ -1,10 +1,23 @@
+import json
+import os
 from company_data_extraction.crew import CompanyDataExtraction
 
 def gather_company_info(company_name):
     inputs = {
         'company_name': company_name
     }
-    return CompanyDataExtraction().crew().kickoff(inputs=inputs)
+
+    crew_output = CompanyDataExtraction().crew().kickoff(inputs=inputs)
+
+    output_file = "company_data.json"
+
+    if os.path.exists(output_file):
+        with open(output_file, "r") as file:
+            json_data = json.load(file)
+        return json_data
+    else:
+        raise FileNotFoundError(f"Expected JSON file '{output_file}' not found.")
+
 
 def run():
     """

@@ -1,36 +1,32 @@
-```json
 {
-  "company_name": "Avid Accountants Ltd",
-  "registered_company_name": "Avid Accountants Ltd",
+  "company_name": "Vantage Accounting",
+  "registered_company_name": "Vantage Accounting Services Limited",
   "billing_address": {
-    "town": "Glasgow",
-    "postcode": "G2 4BL",
-    "state": "Scotland",
-    "address_line_1": "21 Blythswood Square",
-    "address_line_2": ""
+    "town": "Bournemouth",
+    "postcode": "BH9 2BH",
+    "state": "Dorset",
+    "address_line_1": "The Business Centre",
+    "address_line_2": "3-4 Brierley Hill, Winton"
   },
-  "sic_code": "69201, 69202, 69203, 70229",
-  "industry": "ACCOUNTING AND BUSINESS CONSULTANCY",
-  "description": "Avid Accountants Ltd provides a comprehensive range of accountancy and business advisory services to private individuals and companies in various sectors. Their services likely include accounting, tax consultancy, audit support, and business management advisory.",
-  "founded_year": null,
-  "number_of_employees": "1-10, 11-50",
-  "website": "https://www.avidaccountants.co.uk",
+  "sic_code": "69201",
+  "industry": "Accounting Services",
+  "description": "Vantage Accounting Services Limited operates primarily in the accounting sector, offering fixed-rate, all-inclusive accounting services tailored for small businesses and growing enterprises. The company specializes in providing comprehensive accountancy and taxation services.",
+  "founded_year": 2015,
+  "number_of_employees": "50-99",
+  "website": "https://vantage-accounting.co.uk",
   "social_media": [
     {
       "platform": "LinkedIn",
-      "url": "https://uk.linkedin.com/company/avid-accountants"
+      "url": "https://uk.linkedin.com/company/vantage-accounting"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/vantageaccounting/"
     }
   ],
   "key_contacts": [
     {
-      "name": "Naeem Manzoor",
-      "position": "CEO",
-      "email": null,
-      "phone": null,
-      "linkedin": "https://uk.linkedin.com/in/nmanzoor"
-    },
-    {
-      "name": "Ashish Kumar Mehndiratta",
+      "name": "Matthew Sweeney",
       "position": "Director",
       "email": null,
       "phone": null,
@@ -39,4 +35,3 @@
   ],
   "accounting_softwares": ["Xero", "QuickBooks", "Sage"]
 }
-```
