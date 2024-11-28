@@ -10,11 +10,9 @@ research_task:
     sector of the company.
     Provide a brief and accurate description of the business activities of the company.
     Provide a list with the social media profiles of the company.
-    Find the key contacts in the company such as the CEO, CFO, and other relevant individuals.
-    Identify which accounting software a company uses by searching through available online resources such as the company
-    website or trusted business platforms. Focus on identifying widely used accounting software such Xero, QuickBooks,
-    Sage. Some of them provide a list of their partners like https://www.xero.com/advisors/find-advisors for Xero and
-    https://proadvisor.intuit.com/app/accountant/search for QuickBooks.
+    Find the key contacts in the company such as the CEO, CFO, and other relevant individuals. Use multiple search queries
+    to find the information, looking into the "Contact us", "About us" pages on the official website of the compant,
+    their LinkedIn profiles or any other social media the could be used.
   expected_output: A structured text with of the information you were asked for in paragraphs.
   agent: researcher
 
@@ -58,7 +56,6 @@ convert_to_json_task:
           "linkedin": "type: string; example: 'https://www.linkedin.com/in/johndoe')"
         }}
       ],
-      "accounting_softwares": ["type: string; example: xero, quickbooks, sage, freeagent)"]
     }}
   expected_output: >
     A valid JSON file matching the specified structure.
