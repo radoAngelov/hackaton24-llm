@@ -34,11 +34,12 @@ class CompanyDataExtraction():
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def json_converter(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['json_converter'],
 			llm=self.azure_llm,
-			verbose=True
+			verbose=True,
+			memory=True
 		)
 
 	@task
@@ -48,9 +49,9 @@ class CompanyDataExtraction():
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def convert_to_json_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
+			config=self.tasks_config['convert_to_json_task'],
 		)
 
 	@crew

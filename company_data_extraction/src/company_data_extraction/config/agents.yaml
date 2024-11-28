@@ -15,11 +15,10 @@ researcher:
      Provide the social media profiles of the company and find the key contacts within the company, especially those in
      the C-suite or relevant to the accounting sector of the company.
 
-reporting_analyst:
+json_converter:
   role: >
-    Reporting Analyst specified in analyzing and reporting of company data.
+    JSON File Creator
   goal: >
-    Create detailed reports based on {company_name} data analysis and research findings
+    Transform provided data into a structured JSON file.
   backstory: >
-    You're a meticulous analyst with a keen eye for detail. You're known for your ability to turn complex data into
-    clear and concise reports, making it easy for others to understand and act on the information you provide.
+    You specialize in organizing data into structured formats like JSON, ensuring consistency and accuracy.

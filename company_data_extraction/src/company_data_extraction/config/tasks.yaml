@@ -18,13 +18,46 @@ research_task:
   expected_output: A structured text with of the information you were asked for in paragraphs.
   agent: researcher
 
-reporting_task:
+convert_to_json_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
+    Convert the provided report into a JSON file with the following structure:
     Make sure the report is detailed and contains any and all relevant information including links to the social media
     profiles of the key contacts of the company. Add the email, phone, and LinkedIn profile of the contacts of the company.
-  expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
-  output_file: company_data.md
+
+    Ensure the JSON is well-formed and all fields are populated based on the report matching the following structure:
+    {{
+      "company_name": "string (example: 'Top Accounting')",
+      "registered_company_name": "string (example: 'Top Accounting Ltd')",
+      "billing_address": {{
+        "town": "string (example: 'London')",
+        "postcode": "string (example: 'SW1A 1AA')",
+        "state": "string (example: 'London')",
+        "address_line_1": "string (example: '10 Downing Street')",
+        "address_line_2": "string (example: 'Westminster')"
+      }},
+      "sic_code": "string (example: '12345')",
+      "industry": "string (example: 'ACCOUNTING')",
+      "description": "string (example: 'A top accounting firm in UK providing services to small and medium businesses')",
+      "founded_year": "integer (example: 2010)",
+      "number_of_employees": "string (example: '1-10, 11-50, 51-200, 201-500, 501-1000, 1001-5000')",
+      "website": "string (example: 'https://www.topaccounting.co.uk')",
+      "social_media": [
+        {{
+          "platform": "string (example: 'LinkedIn')",
+          "url": "string (example: 'https://www.linkedin.com/company/topaccounting')"
+        }}
+      ],
+      "key_contacts": [
+        {{
+          "name": "string (example: 'John Doe')",
+          "position": "string (example: 'CEO')",
+          "email": "string (example: 'john.doe@topaccounting.co.uk')",
+          "phone": "string (example: '+44 1234 567890')",
+          "linkedin": "string (example: 'https://www.linkedin.com/in/johndoe')"
+        }}
+      ],
+      "accounting_softwares": ["string (example: xero, quickbooks, sage, freeagent)"]
+    }}
+  expected_output: A valid JSON file matching the specified structure. Format the JSON without '```' and '```json' tags.
+  agent: json_converter
+  output_file: company_data.json
